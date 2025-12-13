@@ -1,1 +1,37 @@
 /books
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Environment variables / secrets
+*.env
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDE / editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS stuff
+.DS_Store
+
+# Coverage / test outputs
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Logs
+*.log
