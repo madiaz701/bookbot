@@ -14,3 +14,16 @@ def count_characters(text):
         else:
             character_count_dictionary[lower_ch] += 1
     return character_count_dictionary
+
+def sort_list_of_dictionaries(dictionary):
+    sorted_list = []
+    for k,v in dictionary.items():
+        key_value_pair = {}
+        key_value_pair["char"] = k
+        key_value_pair["num"] = v
+        sorted_list.append(key_value_pair)
+    sorted_list.sort(reverse=True, key=sort_on)
+    return sorted_list
+
+def sort_on(items):
+    return items["num"]

@@ -1,4 +1,4 @@
-from stats import count_words, count_characters
+from stats import count_words, count_characters, sort_list_of_dictionaries
 
 def get_book_text(filepath):
     contents = ""
@@ -11,11 +11,18 @@ def get_book_text(filepath):
 
 def main():
     
+    print("============ BOOKBOT ============")
     book_path = "books/frankenstein.txt"
+    print(f"Analyzing book found at {book_path}...")
     book_contents = get_book_text(book_path)
     word_count = count_words(book_contents)
+    print("----------- Word Count ----------")
     print(f"Found {word_count} total words")
     character_count_dictionary = count_characters(book_contents)
-    print(character_count_dictionary)
+    list_of_characters = sort_list_of_dictionaries(character_count_dictionary)
+    print("--------- Character Count -------")
+    for entry in list_of_characters:
+        if entry["char"].isalpha():
+            print(f"{entry["char"]}: {entry["num"]}")
 
 main()
